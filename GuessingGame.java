@@ -1,3 +1,4 @@
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -42,12 +43,26 @@ import java.util.Scanner;
                     else if(guess>numRandom) {
                         if (i != 5) {
                             System.out.println("Try smaller number...");
+                            if(i==4)
+                            {
+                                System.out.println("You have only one chance now.");
+                            }
+                            else {
+                                System.out.println("You have " + (5 - i) + " chances left");
+                            }
                         }
                     }
 
                     else{
                         if(i!=5) {
                             System.out.println("Try Bigger number...");
+                            if(i==4)
+                            {
+                                System.out.println("You have only one chance now.");
+                            }
+                            else {
+                                System.out.println("You have " + (5 - i) + " chances left");
+                            }
                         }
                     }
                 }
@@ -61,6 +76,7 @@ import java.util.Scanner;
                 System.out.println("\nWould you like to play again?");
                 System.out.println(" 1. Yes");
                 System.out.println(" 2. No");
+                System.out.println("Enter here: ");
                 reply = keyboard.nextInt();
             }
 
